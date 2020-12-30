@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardAdmin.BuatData"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_namakos"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Masukan namakos" />
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Masukan alamat" />
+
+    <EditText
+        android:id="@+id/et_contact"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Masukan Contact" />
+
+    <EditText
+        android:id="@+id/et_fasilitas"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Masukan fasilitas" />
+
+    <EditText
+        android:id="@+id/et_foto"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Masukan kode foto" />
+
+    <Button
+        android:id="@+id/btn_kirimdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert Data"
+        />
+
+    <TextView
+        android:id="@+id/tv_hasilkirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HasilKirim"
+        />
+</LinearLayout>

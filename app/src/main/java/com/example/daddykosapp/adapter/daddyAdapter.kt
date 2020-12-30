@@ -33,9 +33,9 @@ class daddyAdapter(private val list: ArrayList<DataItem>): RecyclerView.Adapter<
     inner class daddyViewHolder (itemView : View): RecyclerView.ViewHolder(itemView){
         fun bindModel(dataItem: DataItem){
             with(itemView){
-                tv_namakos.text = dataItem.nama
-                tv_alamat.text = dataItem.nim
-                tv_fasilitaas.text = dataItem.alamat
+                tv_namakos.text = dataItem.namakos
+                tv_alamat.text = dataItem.alamat
+                tv_fasilitaas.text = dataItem.fasilitas
             }
         }
     }

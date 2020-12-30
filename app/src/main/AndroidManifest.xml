@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashboardAdmin.DetailKos"></activity>
+        <activity android:name=".DashboardAdmin.BuatData"></activity>
+        <activity android:name=".DashboardAdmin.LihatData" />
+        <activity android:name=".DashboardAdmin.DetailKos" />
         <activity android:name=".DashboardAdmin.DashboardAdmin" />
         <activity android:name=".DashboardAdmin.Login_Admin" />
         <activity android:name=".Login" />

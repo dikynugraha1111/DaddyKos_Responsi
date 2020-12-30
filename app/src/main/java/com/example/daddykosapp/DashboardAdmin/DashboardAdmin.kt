@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.daddykosapp.R
 import com.example.daddykosapp.adapter.daddyAdapter
@@ -15,47 +16,27 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class DashboardAdmin : AppCompatActivity() {
-    private var list = ArrayList<DataItem>()
-    var lm = LinearLayoutManager(this)
+class DashboardAdmin : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard_admin)
 
-        getAPI()
+        btn_buatData.setOnClickListener(this)
+        btn_lihatData.setOnClickListener(this)
     }
 
-    fun getAPI(){
-        rv_blog.setHasFixedSize(true)
-        rv_blog.layoutManager = lm
-
-        connections.getRetroClientInstance.getdata().enqueue(object : Callback<datadaddy> {
-            override fun onFailure(call: Call<datadaddy>, t: Throwable) {
-                Log.e("Failed", t.message.toString())
+    override fun onClick(p0: View) {
+        when(p0.id){
+            R.id.btn_buatData->{
+                val intentBuatData = Intent(this@DashboardAdmin, BuatData::class.java)
+                startActivity(intentBuatData)
             }
-
-            override fun onResponse(call: Call<datadaddy>, response: Response<datadaddy>) {
-                val listData = response.body()?.data
-                listData?.let { list.addAll(it) }
-                val adapter = daddyAdapter(list)
-                rv_blog.adapter = adapter
-
-                adapter.setOnItemClickCallback(object : daddyAdapter.OnItemClickCallback{
-                    override fun onItemClicked(data: DataItem) {
-                        val nama =data.nama
-                        Log.e("Success",nama)
-                        val move = Intent (this@DashboardAdmin ,DetailKos::class.java)
-                        val nameProductMove = data.nama
-
-                        move.putExtra(DetailKos.ExtraName, nameProductMove)
-                        startActivity(move)
-
-                    }
-
-                })
+            R.id.btn_lihatData->{
+                val intentLihatData = Intent(this@DashboardAdmin, LihatData::class.java)
+                startActivity(intentLihatData)
             }
-
-        })
+        }
     }
+
 }

@@ -7,11 +7,20 @@
     tools:context=".DashboardAdmin.DashboardAdmin"
     android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_blog"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_blog"
+    <Button
+        android:id="@+id/btn_buatData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buat Data"
         />
+
+    <Button
+        android:id="@+id/btn_lihatData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lihat Data"
+        />
+
+
 
 </LinearLayout>

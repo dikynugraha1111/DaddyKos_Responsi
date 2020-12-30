@@ -2,15 +2,15 @@ package com.example.daddykosapp.model
 
 import com.google.gson.annotations.SerializedName
 
-data class datadaddy (
+data class datadaddydetail (
     @field:SerializedName("data")
-    val data: ArrayList<DataItem>,
+    val data: DataItemdetail,
 
     @field:SerializedName("status")
     val status: String? = null
 )
 
-data class DataItem(
+data class DataItemdetail(
     @field:SerializedName("id")
     val id: String? = null,
 
