@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object connections {
-    private const val BASE_URL = "https://api-arsipkita.000webhostapp.com/"
+    private const val BASE_URL = "http://192.168.1.3/API/public/"
 
     val getRetroClientInstance : getDataApi by lazy {
         val retrofit = Retrofit.Builder()

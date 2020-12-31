@@ -1,19 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardAdmin.DetailKos"
-    android:orientation="vertical"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/gambar1" />
+
+        <TextView
+            android:id="@+id/product_name"
+            style="@style/TextContent.Small.White"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#4D000000"
+            android:drawableStart="@drawable/ic_collections_white_18dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Kos-Kosan"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_nama_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NAMA"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        style="@style/TextContent.Black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        tools:text="Nama Kos"
+        android:textSize="32sp" />
 
-</LinearLayout>
+    <TextView
+        style="@style/TextContent.Subtitle"
+        android:layout_marginBottom="16dp"
+        android:text="Stock TERBATAS ANJAY" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                style="@style/TextSpec.Field"
+                android:text="Nama Kos" />
+
+            <EditText
+                android:id="@+id/et_namakosnew"
+                style="@style/TextSpec.Value"
+                android:hint="KOS KOS AN" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                style="@style/TextSpec.Field"
+                android:text="Alamat Kos" />
+
+            <EditText
+                android:id="@+id/et_alamatkosnew"
+                style="@style/TextSpec.Value"
+                android:hint="Alamat KOS KOS AN" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                style="@style/TextSpec.Field"
+                android:text="contact Kos" />
+
+            <EditText
+                android:id="@+id/et_contactkosnew"
+                style="@style/TextSpec.Value"
+                android:hint="Contact KOS KOS AN" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                style="@style/TextSpec.Field"
+                android:text="Fasilitas Kos" />
+
+            <EditText
+                android:id="@+id/et_fasilitaskosnew"
+                style="@style/TextSpec.Value"
+                android:hint="Fasilitas KOS KOS AN" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                style="@style/TextSpec.Field"
+                android:text="Foto Kos" />
+
+            <EditText
+                android:id="@+id/et_fotokosnew"
+                style="@style/TextSpec.Value"
+                android:hint="Foto KOS KOS AN" />
+        </TableRow>
+    </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:text="UPDATE"/>
+
+                <Button
+                    android:id="@+id/btn_deleteddd"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:text="DELETE"
+                    />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

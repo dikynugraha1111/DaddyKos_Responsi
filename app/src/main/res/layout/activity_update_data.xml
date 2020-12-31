@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardAdmin.updateData"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_updatenamakos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nama Kos"
+        />
+
+    <EditText
+        android:id="@+id/et_updatealamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Alamat"/>
+
+    <EditText
+        android:id="@+id/et_updatecontact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact"
+        />
+
+    <EditText
+        android:id="@+id/et_updatefasilitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fasilitas"
+        />
+
+    <EditText
+        android:id="@+id/et_updatefoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Foto"
+        />
+
+    <Button
+        android:id="@+id/btn_UpdateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPDATE"
+        />
+
+    <TextView
+        android:id="@+id/tv_hasilupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
