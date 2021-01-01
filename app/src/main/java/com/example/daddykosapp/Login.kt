@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.daddykosapp.DashboardAdmin.Login_Admin
+import com.example.daddykosapp.DashboardPublic.LihatDataPublic
 import kotlinx.android.synthetic.main.activity_login.*
 
 class Login : AppCompatActivity(), View.OnClickListener {
@@ -24,7 +25,8 @@ class Login : AppCompatActivity(), View.OnClickListener {
                 startActivity(intentAdmin)
             }
             R.id.btn_cst->{
-
+                val intentCst = Intent(this@Login,LihatDataPublic::class.java)
+                startActivity(intentCst)
             }
         }
     }

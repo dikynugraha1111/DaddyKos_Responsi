@@ -7,6 +7,7 @@ import android.os.Handler
 import android.provider.ContactsContract
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.example.daddykosapp.Login
 import com.example.daddykosapp.R
 import com.example.daddykosapp.adapter.daddyAdapter
@@ -100,11 +101,14 @@ class DetailKos : AppCompatActivity(), View.OnClickListener {
                         response: Response<datadaddyput>
                     ) {
                         Log.e("Success",response.code().toString())
-                        finish()
+                        val toastUpdated = Toast.makeText(applicationContext,"Data Updated",Toast.LENGTH_LONG)
+                        toastUpdated.show()
+                        Handler().postDelayed({
+                            finish()
+                            val losDol = Intent(this@DetailKos, LihatData::class.java)
+                            startActivity(losDol) }, 1020*2)
                     }
                 })
-                val intentUpdated = Intent(this@DetailKos,LihatData::class.java)
-                startActivity(intentUpdated)
             }
             R.id.btn_deleteddd->{
                 delete()

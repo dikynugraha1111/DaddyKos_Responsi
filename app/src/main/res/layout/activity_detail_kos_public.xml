@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardPublic.DetailKosPublic"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_move"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/gambar1" />
+
+            <TextView
+                android:id="@+id/product_name"
+                style="@style/TextContent.Small.White"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#4D000000"
+                android:drawableStart="@drawable/ic_collections_white_18dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Kos-Kosan"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_nama_detailpublic"
+            style="@style/TextContent.Black"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            tools:text="Nama Kos"
+            android:textSize="32sp" />
+
+        <TextView
+            style="@style/TextContent.Subtitle"
+            android:layout_marginBottom="16dp"
+            android:text="Stock TERBATAS ANJAY" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextSpec.Field"
+                    android:text="Nama Kos" />
+
+                <TextView
+                    android:id="@+id/tv_namakospublic"
+                    style="@style/TextSpec.Value"
+                    android:text="Nama Kos" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextSpec.Field"
+                    android:text="Alamat Kos" />
+
+                <TextView
+                    android:id="@+id/tv_alamatkospublic"
+                    style="@style/TextSpec.Value"
+                    android:text="Alamat KOS KOS AN" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextSpec.Field"
+                    android:text="contact Kos" />
+
+                <TextView
+                    android:id="@+id/tv_contactkospublic"
+                    style="@style/TextSpec.Value"
+                    android:text="Contact KOS KOS AN" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextSpec.Field"
+                    android:text="Fasilitas Kos" />
+
+                <TextView
+                    android:id="@+id/tv_fasilitaskospublic"
+                    style="@style/TextSpec.Value"
+                    android:text="Fasilitas KOS KOS AN" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextSpec.Field"
+                    android:text="Foto Kos" />
+
+                <TextView
+                    android:id="@+id/tv_fotokospublic"
+                    style="@style/TextSpec.Value"
+                    android:text="Foto KOS KOS AN" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/btn_map"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:text="MAP"/>
+
+                <Button
+                    android:id="@+id/btn_telp"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:text="TELP"
+                    />
+
+                <Button
+                    android:id="@+id/btn_SMS"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:text="SMS"
+                    />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

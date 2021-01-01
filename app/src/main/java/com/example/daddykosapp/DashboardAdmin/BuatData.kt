@@ -1,9 +1,13 @@
 package com.example.daddykosapp.DashboardAdmin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+import com.example.daddykosapp.Login
 import com.example.daddykosapp.R
 import com.example.daddykosapp.model.datadaddypost
 import com.example.daddykosapp.utils.connections
@@ -39,6 +43,8 @@ class BuatData : AppCompatActivity(), View.OnClickListener {
             override fun onResponse(call: Call<datadaddypost>, response: Response<datadaddypost>) {
                 val hasil = "Response code: + ${response.code()} "
                 tv_hasilkirim.text = hasil
+                val toastCreated = Toast.makeText(applicationContext,"Data Terikirim",Toast.LENGTH_LONG)
+                toastCreated.show()
             }
 
         })
@@ -56,6 +62,10 @@ class BuatData : AppCompatActivity(), View.OnClickListener {
                     et_fasilitas.text.toString(),
                     et_foto.text.toString()
                 )
+                Handler().postDelayed({
+                    finish()
+                    val losDol = Intent(this, LihatData::class.java)
+                    startActivity(losDol) }, 1020*2)
             }
         }
     }
